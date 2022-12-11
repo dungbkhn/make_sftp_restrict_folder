@@ -10,3 +10,6 @@ create pass: 1234
 ---
 dang nhap bang root
 chay git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git
+cd make_sftp_restrict_folder
+chmod 755 make_sftp_restrict_folder.sh
+./make_sftp_restrict_folder.sh

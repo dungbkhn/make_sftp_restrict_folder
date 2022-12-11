@@ -1,0 +1,9 @@
+---
+armbian pc
+ssh root@<ipv4>
+pass:1234
+chu y arm da co san git roi
+---
+sau do
+create new user:store
+create pass: 1234

@@ -30,8 +30,7 @@ fi
 echo '#Subsystem sftp internal-sftp' >> /etc/ssh/sshd_config
 echo 'Match Group restriction' >> /etc/ssh/sshd_config
 echo '  ChrootDirectory /var/res' >> /etc/ssh/sshd_config
-#this cause ssh-fail when connecting by store account
-#echo '  ForceCommand internal-sftp' >> /etc/ssh/sshd_config
+echo '  ForceCommand internal-sftp' >> /etc/ssh/sshd_config
 echo '  AllowTcpForwarding no' >> /etc/ssh/sshd_config
 echo '  X11Forwarding no' >> /etc/ssh/sshd_config
 echo '  PermitTunnel no' >> /etc/ssh/sshd_config

@@ -7,3 +7,6 @@ chu y arm da co san git roi
 sau do
 create new user:store
 create pass: 1234
+---
+dang nhap bang root
+chay git clone <this project>

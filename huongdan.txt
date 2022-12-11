@@ -1,5 +1,6 @@
 ---
-armbian pc
+cai dat armbian orange pi pc
+dung nmap -sP 192.168.1.1/24 de do tim orange pi pc tren LAN
 ssh root@<ipv4>
 pass:1234
 chu y arm da co san git roi

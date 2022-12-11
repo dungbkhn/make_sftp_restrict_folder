@@ -23,7 +23,9 @@ chown store /var/res/share
 
 mkdir /var/res/backup
 
-cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
+if [ ! -f /etc/ssh/sshd_config_backup ] ; then
+  cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
+fi
 
 echo '#Subsystem sftp internal-sftp' >> /etc/ssh/sshd_config
 echo 'Match Group restriction' >> /etc/ssh/sshd_config

@@ -9,4 +9,4 @@ create new user:store
 create pass: 1234
 ---
 dang nhap bang root
-chay git clone <this project>
+chay git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git

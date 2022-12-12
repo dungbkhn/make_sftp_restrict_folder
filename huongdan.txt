@@ -22,7 +22,7 @@ cd /home/dungnt
 apt install git -y
 #chu y thuong armbian da co san git roi
 git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git
-cd make_sftp_restrict_folder
+cd /home/dungnt/make_sftp_restrict_folder
 chmod 755 make_sftp_restrict_folder.sh
 chmod 755 install_com.sh
 ./make_sftp_restrict_folder.sh

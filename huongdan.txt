@@ -34,3 +34,16 @@ sau do dang nhap lai bang dungnt
 chay 
 cd ~/make_sftp_restrict_folder
 sudo ./install_com.sh
+------
+tao file sau, thiet lap chmod 755 cho no
+=====
+#!/bin/bash
+shopt -s dotglob
+shopt -s nullglob
+
+node /home/dungnt/ChangeRemoteInfo/server.js
+=====
+thiep lap trong crontab
+sudo crontab -e
+roi them dong sau
+@reboot /home/dungnt/setup_for_crontab.sh

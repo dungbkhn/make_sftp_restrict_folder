@@ -47,6 +47,8 @@ rm /home/dungnt/mount_ok.txt
 cd /home/dungnt/ChangeRemoteInfo
 node server.js &
 
+cd /home/dungnt
+
 while true;
 do
   rs=$(/sbin/fdisk -l | grep "/dev/sda")
@@ -73,6 +75,8 @@ cd /home/dungnt/CreateRemoteLink
 node server.js &
 cd /home/dungnt/autotox
 ./autotox &
+
+cd /home/dungnt
 
 while true;
 do

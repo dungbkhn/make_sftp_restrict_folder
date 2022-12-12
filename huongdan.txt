@@ -41,6 +41,7 @@ tao file sau, thiet lap chmod 755 cho no
 shopt -s dotglob
 shopt -s nullglob
 
+syncthing &
 cd /home/dungnt/ChangeRemoteInfo
 node server.js &
 cd /home/dungnt/CreateRemoteLink

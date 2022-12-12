@@ -90,4 +90,10 @@ done
 thiep lap trong crontab
 sudo crontab -e
 roi them dong sau
+@reboot /home/dungnt/setup_for_root_crontab.sh
+
+-----
+
+crontab -e
+roi them dong sau
 @reboot /home/dungnt/setup_for_crontab.sh

@@ -11,10 +11,11 @@ create new user:store
 create pass: 1234
 ---
 dang nhap bang root
-chay: cd ~
-chay: apt install git
-chu y thuong armbian da co san git roi
-chay: git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git
+chay: 
+cd ~
+apt install git
+#chu y thuong armbian da co san git roi
+git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git
 cd make_sftp_restrict_folder
 chmod 755 make_sftp_restrict_folder.sh
 chmod 755 install_com.sh

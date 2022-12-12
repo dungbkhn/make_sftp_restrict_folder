@@ -122,6 +122,8 @@ text=$an
 
 echo $text
 
+timeout 10s syncthing
+
 sed -i.backup '/127.0.0.1/ s/127.0.0.1/'$text'/' /root/.config/syncthing/config.xml
 
 rm -r /home/dungnt/Sync

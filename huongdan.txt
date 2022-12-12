@@ -15,9 +15,9 @@ tao file start.sh, gan chmod 755 cho file va chay file voi sudo:
 
 =================================start.sh====================================
 #!/bin/bash
-
 shopt -s dotglob
 shopt -s nullglob
+
 cd /home/dungnt
 apt install git -y
 #chu y thuong armbian da co san git roi

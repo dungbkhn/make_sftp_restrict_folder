@@ -94,12 +94,37 @@ if [ "$rs" == "" ]; then
     exit 1
 fi
 
-sed -i.backup '/127.0.0.1/ s/127.0.0.1/192.168.1.159/' /root/.config/syncthing/config.xml
+# Set comma as delimiter
+IFS='/'
+
+#Read the split words into an array based on comma delimiter
+read -a strarr <<< "$rs"
+
+bn=$(echo "${strarr[0]}" | xargs)
+
+an=$(echo "${strarr[1]}" | xargs)
+
+#Print the splitted words
+text=$bn
+
+# Set comma as delimiter
+IFS=' '
+
+#Read the split words into an array based on comma delimiter
+read -a strarr <<< "$text"
+
+bn=$(echo "${strarr[0]}" | xargs)
+
+an=$(echo "${strarr[1]}" | xargs)
+
+#Print the splitted words
+text=$an
+
+sed -i.backup '/127.0.0.1/ s/127.0.0.1/'"$text"'/' /root/.config/syncthing/config.xml
 
 echo "-----------------------------"
 echo "OK, all coms are installed"
 echo "-----------------------------"
-
 
 exit 0
 

@@ -45,18 +45,21 @@ shopt -s nullglob
 rs=$(/sbin/fdisk -l | grep "/dev/sda")
 
 if [ "$rs"!="" ] ; then
-  mount /dev/sda1 /var/res/backup
-  syncthing &
+  mount /dev/sda1 /var/res/backup  
 fi
 cd /home/dungnt/ChangeRemoteInfo
 node server.js &
+
+=====
+
+syncthing &
 cd /home/dungnt/CreateRemoteLink
 node server.js &
 cd /home/dungnt/autotox
 ./autotox &
 
-
 =====
+
 thiep lap trong crontab
 sudo crontab -e
 roi them dong sau

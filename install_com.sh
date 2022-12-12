@@ -18,6 +18,8 @@ fi
 
 apt install git -y
 
+rm -r ~/ChangeRemoteInfo
+
 git clone https://github.com/dungbkhn/ChangeRemoteInfo.git
 
 if [ $? -eq 0 ]; then
@@ -39,6 +41,8 @@ chmod 755 ./changepw.sh
 
 cd ~
 
+rm -r ~/CreateRemoteLink
+ 
 git clone https://github.com/dungbkhn/CreateRemoteLink.git
 
 if [ $? -eq 0 ]; then
@@ -57,6 +61,8 @@ npm install multer express find
 chmod 755 ./getipv6addr.sh
 
 cd ~
+
+rm -r ~/autotox
 
 git clone https://github.com/dungbkhn/autotox.git
 

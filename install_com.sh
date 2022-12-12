@@ -87,6 +87,8 @@ cd $curdir
 
 apt install syncthing -y
 
+sed -i.backup '/127.0.0.1/ s/127.0.0.1/192.168.1.159/' /root/.config/syncthing/config.xml
+
 echo "-----------------------------"
 echo "OK, all coms are installed"
 echo "-----------------------------"

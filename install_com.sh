@@ -16,6 +16,8 @@ if [ "$rs" == "" ] ; then
 	exit 1
 fi
 
+apt install git
+
 git clone https://github.com/dungbkhn/ChangeRemoteInfo.git
 
 cd ./ChangeRemoteInfo

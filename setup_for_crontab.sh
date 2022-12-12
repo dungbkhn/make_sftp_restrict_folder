@@ -2,4 +2,11 @@
 shopt -s dotglob
 shopt -s nullglob
 
-node /home/dungnt/ChangeRemoteInfo/server.js
+syncthing &
+
+cd /home/dungnt/ChangeRemoteInfo
+node server.js &
+cd /home/dungnt/CreateRemoteLink
+node server.js &
+cd /home/dungnt/autotox
+./autotox &

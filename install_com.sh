@@ -16,13 +16,13 @@ if [ "$rs" == "" ] ; then
 	exit 1
 fi
 
-apt install git
+apt install git -y
 
 git clone https://github.com/dungbkhn/ChangeRemoteInfo.git
 
 cd ./ChangeRemoteInfo
 
-apt install nodejs npm
+apt install nodejs npm -y
 
 npm install multer express find
 
@@ -44,7 +44,7 @@ git clone https://github.com/dungbkhn/autotox.git
 
 cd ./autotox
 
-apt install libtoxcore-dev
+apt install libtoxcore-dev -y
 
 make clean
 

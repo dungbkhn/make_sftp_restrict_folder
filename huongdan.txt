@@ -11,7 +11,7 @@ create new user:store
 create pass: 1234
 ---
 dang nhap bang root
-tao file, gan chmod 755 cho file va chay file:
+tao file start.sh, gan chmod 755 cho file va chay file:
 
 
 #!/bin/bash

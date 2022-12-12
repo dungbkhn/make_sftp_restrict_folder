@@ -11,7 +11,7 @@ create new user:dungnt
 create new pass for dungnt
 ---
 dang nhap bang dungnt
-tao file start.sh, gan sudo chmod 755 cho file va chay file voi sudo:
+tao file start.sh, gan chmod 755 cho file va chay file voi sudo:
 
 =================================start.sh====================================
 #!/bin/bash

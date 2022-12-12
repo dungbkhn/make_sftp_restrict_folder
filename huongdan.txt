@@ -42,11 +42,19 @@ tao file setup_for_crontab.sh, thiet lap chmod 755 cho no
 shopt -s dotglob
 shopt -s nullglob
 
-rs=$(/sbin/fdisk -l | grep "/dev/sda")
+rm /home/dungnt/mount_ok.txt
 
-if [ "$rs"!="" ] ; then
-  mount /dev/sda1 /var/res/backup  
-fi
+while true
+do
+  rs=$(/sbin/fdisk -l | grep "/dev/sda")
+
+  if [ "$rs"!="" ] ; then
+    mount /dev/sda1 /var/res/backup  
+    touch /home/dungnt/mount_ok.txt
+    break
+  fi
+done
+
 cd /home/dungnt/ChangeRemoteInfo
 node server.js &
 

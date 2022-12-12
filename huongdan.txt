@@ -11,7 +11,13 @@ create new user:store
 create pass: 1234
 ---
 dang nhap bang root
-chay: 
+tao file, gan chmod 755 cho file va chay file:
+
+
+#!/bin/bash
+
+shopt -s dotglob
+shopt -s nullglob
 cd ~
 apt install git
 #chu y thuong armbian da co san git roi

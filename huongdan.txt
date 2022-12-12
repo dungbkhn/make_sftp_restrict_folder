@@ -3,7 +3,7 @@ cai dat armbian orange pi pc
 dung nmap -sP 192.168.1.1/24 de do tim orange pi pc tren LAN
 ssh root@<ipv4>
 pass:1234
-chu y arm da co san git roi
+
 ---
 sau do
 create new user:store
@@ -12,6 +12,7 @@ create pass: 1234
 dang nhap bang root
 chay: cd ~
 chay: apt install git
+chu y thuong armbian da co san git roi
 chay: git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git
 cd make_sftp_restrict_folder
 chmod 755 make_sftp_restrict_folder.sh

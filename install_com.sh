@@ -83,11 +83,14 @@ make clean
 
 make
 
+cd $curdir
+
+apt install syncthing -y
+
 echo "-----------------------------"
 echo "OK, all coms are installed"
 echo "-----------------------------"
 
-cd $curdir
 
 exit 0
 

@@ -18,7 +18,7 @@ tao file start.sh, gan chmod 755 cho file va chay file voi sudo:
 
 shopt -s dotglob
 shopt -s nullglob
-cd ~
+cd /home/dungnt
 apt install git -y
 #chu y thuong armbian da co san git roi
 git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git

@@ -6,6 +6,7 @@ pass:1234
 
 ---
 sau do
+create new pass for root
 create new user:store
 create pass: 1234
 ---

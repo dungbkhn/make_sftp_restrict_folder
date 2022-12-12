@@ -20,6 +20,15 @@ apt install git -y
 
 git clone https://github.com/dungbkhn/ChangeRemoteInfo.git
 
+if [ $? -eq 0 ]; then
+    echo "Clone https://github.com/dungbkhn/ChangeRemoteInfo.git OK"
+else
+    echo "Clone https://github.com/dungbkhn/ChangeRemoteInfo.git FAIL"
+    rm -r ~/ChangeRemoteInfo
+    cd $curdir
+    exit 1
+fi
+
 cd ./ChangeRemoteInfo
 
 apt install nodejs npm -y
@@ -32,6 +41,15 @@ cd ~
 
 git clone https://github.com/dungbkhn/CreateRemoteLink.git
 
+if [ $? -eq 0 ]; then
+    echo "Clone https://github.com/dungbkhn/CreateRemoteLink.git OK"
+else
+    echo "Clone https://github.com/dungbkhn/CreateRemoteLink.git FAIL"
+    rm -r ~/CreateRemoteLink
+    cd $curdir
+    exit 1
+fi
+
 cd ./CreateRemoteLink
 
 npm install multer express find
@@ -41,6 +59,15 @@ chmod 755 ./getipv6addr.sh
 cd ~
 
 git clone https://github.com/dungbkhn/autotox.git
+
+if [ $? -eq 0 ]; then
+    echo "Clone https://github.com/dungbkhn/autotox.git OK"
+else
+    echo "Clone https://github.com/dungbkhn/autotox.git FAIL"
+    rm -r ~/autotox
+    cd $curdir
+    exit 1
+fi
 
 cd ./autotox
 

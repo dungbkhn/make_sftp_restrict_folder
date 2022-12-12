@@ -56,6 +56,8 @@ do
     touch /home/dungnt/mount_ok.txt
     break
   fi
+  
+  sleep 2
 done
 
 =====

@@ -35,6 +35,8 @@ echo '  AllowTcpForwarding no' >> /etc/ssh/sshd_config
 echo '  X11Forwarding no' >> /etc/ssh/sshd_config
 echo '  PermitTunnel no' >> /etc/ssh/sshd_config
 
+rs=$(ip -6 address | grep 'scope global')
+
 if [ "$rs" == "" ] ; then 
 	echo "No Internet Access, Can not install Git!"
 	reboot

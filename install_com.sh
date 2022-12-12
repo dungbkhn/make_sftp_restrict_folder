@@ -16,7 +16,7 @@ if [ "$rs" == "" ] ; then
 	exit 1
 fi
 
-rm -r /home/dungnt/ChangeRemoteInfo
+rm -r -f /home/dungnt/ChangeRemoteInfo
 
 git clone https://github.com/dungbkhn/ChangeRemoteInfo.git
 
@@ -24,7 +24,7 @@ if [ $? -eq 0 ]; then
     echo "Clone https://github.com/dungbkhn/ChangeRemoteInfo.git OK"
 else
     echo "Clone https://github.com/dungbkhn/ChangeRemoteInfo.git FAIL"
-    rm -r /home/dungnt/ChangeRemoteInfo
+    rm -r -f /home/dungnt/ChangeRemoteInfo
     cd $curdir
     exit 1
 fi
@@ -37,7 +37,7 @@ chmod 755 ./changepw.sh
 
 cd /home/dungnt
 
-rm -r /home/dungnt/CreateRemoteLink
+rm -r -f /home/dungnt/CreateRemoteLink
  
 git clone https://github.com/dungbkhn/CreateRemoteLink.git
 
@@ -45,7 +45,7 @@ if [ $? -eq 0 ]; then
     echo "Clone https://github.com/dungbkhn/CreateRemoteLink.git OK"
 else
     echo "Clone https://github.com/dungbkhn/CreateRemoteLink.git FAIL"
-    rm -r /home/dungnt/CreateRemoteLink
+    rm -r -f /home/dungnt/CreateRemoteLink
     cd $curdir
     exit 1
 fi
@@ -58,7 +58,7 @@ chmod 755 ./getipv6addr.sh
 
 cd /home/dungnt
 
-rm -r /home/dungnt/autotox
+rm -r -f /home/dungnt/autotox
 
 git clone https://github.com/dungbkhn/autotox.git
 
@@ -66,7 +66,7 @@ if [ $? -eq 0 ]; then
     echo "Clone https://github.com/dungbkhn/autotox.git OK"
 else
     echo "Clone https://github.com/dungbkhn/autotox.git FAIL"
-    rm -r /home/dungnt/autotox
+    rm -r -f /home/dungnt/autotox
     cd $curdir
     exit 1
 fi
@@ -78,8 +78,6 @@ make clean
 make
 
 cd $curdir
-
-
 
 echo "-----------------------------"
 echo "OK, all coms are installed"

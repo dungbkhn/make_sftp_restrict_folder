@@ -41,8 +41,13 @@ tao file sau, thiet lap chmod 755 cho no
 shopt -s dotglob
 shopt -s nullglob
 
-cd /home/dungnt/ChangeRemoteInfo/
-node server.js
+cd /home/dungnt/ChangeRemoteInfo
+node server.js &
+cd /home/dungnt/CreateRemoteLink
+node server.js &
+cd /home/dungnt/autotox
+./autotox &
+
 
 =====
 thiep lap trong crontab

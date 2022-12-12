@@ -45,45 +45,4 @@ apt install libtoxcore-dev -y
 
 apt install syncthing -y
 
-rs=$(ip -4 address | grep 'scope global')
-
-if [ "$rs" == "" ]; then
-    echo "No Network Found, Abort!"
-    exit 1
-fi
-
-# Set comma as delimiter
-IFS='/'
-
-#Read the split words into an array based on comma delimiter
-read -a strarr <<< "$rs"
-
-bn=$(echo "${strarr[0]}" | xargs)
-
-an=$(echo "${strarr[1]}" | xargs)
-
-#Print the splitted words
-text=$bn
-
-# Set comma as delimiter
-IFS=' '
-
-#Read the split words into an array based on comma delimiter
-read -a strarr <<< "$text"
-
-bn=$(echo "${strarr[0]}" | xargs)
-
-an=$(echo "${strarr[1]}" | xargs)
-
-#Print the splitted words
-text=$an
-
-echo $text
-
-timeout 10s syncthing
-
-sed -i.backup '/127.0.0.1/ s/127.0.0.1/'$text'/' /root/.config/syncthing/config.xml
-
-rm -r /home/dungnt/Sync
-
 reboot

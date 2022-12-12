@@ -7,11 +7,11 @@ pass:1234
 ---
 sau do
 create new pass for root
-create new user:store
+create new user:dungnt
 create pass: 1234
 ---
-dang nhap bang root
-tao file start.sh, gan chmod 755 cho file va chay file:
+dang nhap bang dungnt
+tao file start.sh, gan sudo chmod 755 cho file va chay file voi sudo:
 
 =================================start.sh====================================
 #!/bin/bash
@@ -27,7 +27,7 @@ chmod 755 make_sftp_restrict_folder.sh
 chmod 755 install_com.sh
 ./make_sftp_restrict_folder.sh
 =============================================================================
-sau do dang nhap lai bang root
+sau do dang nhap lai bang dungnt
 chay 
 cd ~/make_sftp_restrict_folder
-./install_com.sh
+sudo ./install_com.sh

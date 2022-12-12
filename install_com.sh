@@ -55,7 +55,7 @@ timeout 10s syncthing
 
 sed -i.backup '/127.0.0.1/ s/127.0.0.1/'$text'/' ./.config/syncthing/config.xml
 
-rm -r /home/dungnt/Sync
+rm -r -f /home/dungnt/Sync
 
 rm -r -f /home/dungnt/ChangeRemoteInfo
 

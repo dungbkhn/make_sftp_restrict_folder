@@ -76,16 +76,15 @@ cd /home/dungnt/autotox
 
 while true;
 do
-  if [ "$rs"!="" ] ; then
-    mount /dev/sda1 /var/res/backup  
-    touch /home/dungnt/mount_ok.txt
+  if [ -f /home/dungnt/mount_ok.txt ] ; then
+    syncthing &
     break
   fi
   
   sleep 2
 done
 
-syncthing &
+
 =====
 
 thiep lap trong crontab

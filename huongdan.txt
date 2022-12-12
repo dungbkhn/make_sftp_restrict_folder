@@ -35,7 +35,7 @@ chay
 cd ~/make_sftp_restrict_folder
 sudo ./install_com.sh
 ------
-tao file sau, thiet lap chmod 755 cho no
+tao file setup_for_crontab.sh, thiet lap chmod 755 cho no
 =====
 #!/bin/bash
 shopt -s dotglob

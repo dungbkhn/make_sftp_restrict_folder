@@ -42,7 +42,7 @@ if [ "$rs" == "" ] ; then
 	reboot
 fi
 
-apt install git
+apt install git -y
 
 reboot
 

@@ -19,7 +19,7 @@ tao file, gan chmod 755 cho file va chay file:
 shopt -s dotglob
 shopt -s nullglob
 cd ~
-apt install git
+apt install git -y
 #chu y thuong armbian da co san git roi
 git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git
 cd make_sftp_restrict_folder

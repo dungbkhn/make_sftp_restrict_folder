@@ -23,6 +23,10 @@ chown store /var/res/share
 
 mkdir /var/res/backup
 
+chgrp -R dungnt /var/res/backup
+
+chown dungnt /var/res/backup
+
 if [ ! -f /etc/ssh/sshd_config_backup ] ; then
   cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
 fi

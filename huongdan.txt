@@ -34,7 +34,8 @@ sau do dang nhap lai bang dungnt
 chay ko dung sudo
 cd ~/make_sftp_restrict_folder
 ./install_com.sh
-do ------
+
+------
 tao file setup_for_crontab.sh, thiet lap chmod 755 cho no
 =====
 #!/bin/bash

@@ -31,10 +31,10 @@ chmod 755 install_com.sh
 ./make_sftp_restrict_folder.sh
 =============================================================================
 sau do dang nhap lai bang dungnt
-chay 
+chay ko dung sudo
 cd ~/make_sftp_restrict_folder
-sudo ./install_com.sh
-------
+./install_com.sh
+do ------
 tao file setup_for_crontab.sh, thiet lap chmod 755 cho no
 =====
 #!/bin/bash

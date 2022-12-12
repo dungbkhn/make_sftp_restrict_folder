@@ -55,6 +55,7 @@ do
 
   if [ "$rs"!="" ] ; then
     mount /dev/sda1 /var/res/backup  
+    chmod 755 /var/res/backup
     touch /home/dungnt/mount_ok.txt
     break
   fi

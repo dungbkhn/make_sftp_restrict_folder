@@ -87,6 +87,13 @@ cd $curdir
 
 apt install syncthing -y
 
+rs=$(ip -4 address | grep 'scope global')
+
+if [ "$rs" == "" ]; then
+    echo "No Network Found, Abort!"
+    exit 1
+fi
+
 sed -i.backup '/127.0.0.1/ s/127.0.0.1/192.168.1.159/' /root/.config/syncthing/config.xml
 
 echo "-----------------------------"

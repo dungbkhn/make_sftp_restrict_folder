@@ -35,6 +35,13 @@ echo '  AllowTcpForwarding no' >> /etc/ssh/sshd_config
 echo '  X11Forwarding no' >> /etc/ssh/sshd_config
 echo '  PermitTunnel no' >> /etc/ssh/sshd_config
 
+if [ "$rs" == "" ] ; then 
+	echo "No Internet Access, Can not install Git!"
+	reboot
+fi
+
+apt install git
+
 reboot
 
 

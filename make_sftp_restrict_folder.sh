@@ -5,7 +5,7 @@ shopt -s nullglob
 
 addgroup restriction
 
-#useradd -m store
+useradd -M store
 
 echo -e "td123456789\ntd123456789" | passwd store
 

@@ -61,13 +61,31 @@ do
 done
 
 =====
+tao file setup_for_crontab.sh, thiet lap chmod 755 cho no
+=====
+#!/bin/bash
+shopt -s dotglob
+shopt -s nullglob
 
-syncthing &
+sleep 2
+
 cd /home/dungnt/CreateRemoteLink
 node server.js &
 cd /home/dungnt/autotox
 ./autotox &
 
+while true;
+do
+  if [ "$rs"!="" ] ; then
+    mount /dev/sda1 /var/res/backup  
+    touch /home/dungnt/mount_ok.txt
+    break
+  fi
+  
+  sleep 2
+done
+
+syncthing &
 =====
 
 thiep lap trong crontab

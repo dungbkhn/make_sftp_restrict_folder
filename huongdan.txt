@@ -8,7 +8,7 @@ pass:1234
 sau do
 create new pass for root
 create new user:dungnt
-create pass: 1234
+create new pass for dungnt
 ---
 dang nhap bang dungnt
 tao file start.sh, gan sudo chmod 755 cho file va chay file voi sudo:

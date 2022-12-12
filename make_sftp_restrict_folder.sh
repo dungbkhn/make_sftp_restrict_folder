@@ -39,4 +39,14 @@ echo '  AllowTcpForwarding no' >> /etc/ssh/sshd_config
 echo '  X11Forwarding no' >> /etc/ssh/sshd_config
 echo '  PermitTunnel no' >> /etc/ssh/sshd_config
 
+rm -r /home/dungnt/ChangeRemoteInfo
+
+rm -r /home/dungnt/CreateRemoteLink
+
+rm -r /home/dungnt/autotox
+
+apt install nodejs npm -y
+
+apt install libtoxcore-dev -y
+
 reboot

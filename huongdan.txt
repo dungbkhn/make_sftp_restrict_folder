@@ -44,6 +44,9 @@ shopt -s nullglob
 
 rm /home/dungnt/mount_ok.txt
 
+cd /home/dungnt/ChangeRemoteInfo
+node server.js &
+
 while true
 do
   rs=$(/sbin/fdisk -l | grep "/dev/sda")
@@ -54,9 +57,6 @@ do
     break
   fi
 done
-
-cd /home/dungnt/ChangeRemoteInfo
-node server.js &
 
 =====
 

@@ -29,6 +29,5 @@ chmod 755 install_com.sh
 =============================================================================
 sau do dang nhap lai bang root
 chay 
-cd ~
-cd make_sftp_restrict_folder
+cd ~/make_sftp_restrict_folder
 ./install_com.sh

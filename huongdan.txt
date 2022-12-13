@@ -73,6 +73,26 @@ do
   sleep 3
 done
 
+sleep 3
+
+while true;
+do
+  rs1=$(/sbin/fdisk -l | grep "/dev/sda")
+  rs2=$(df | grep '/var/res/backup')
+  
+  if [ "$rs2"=="" ] ; then
+    rm /home/dungnt/mount_ok.txt
+    #stop syncthing
+    if [ "$rs1"!="" ] ; then
+      #trymount
+      mount /dev/sda1 /var/res/backup  
+      chmod 755 /var/res/backup
+      touch /home/dungnt/mount_ok.txt    
+    fi
+  fi
+  
+  sleep 15
+done
 
 =====
 tao file setup_for_crontab.sh, thiet lap chmod 755 cho no
@@ -105,6 +125,8 @@ do
   
   sleep 3
 done
+
+sleep 3
 
 while true;
 do

@@ -127,12 +127,14 @@ cd /home/dungnt
 while true;
 do
   if [ -f /home/dungnt/mount_ok.txt ] ; then
+    echo 'syncthing first time'
     syncthing &
     rm -f /home/dungnt/mount_ok.txt
     break
   fi
   
   if [ -f /home/dungnt/mount_not_ok.txt ] ; then
+    echo 'syncthing first time not ok'
     rm -f /home/dungnt/mount_not_ok.txt
     break
   fi
@@ -145,6 +147,7 @@ sleep 3
 while true;
 do
   if [ -f /home/dungnt/mount_ok.txt ] ; then
+    echo 'syncthing in loop ok'
     syncthing &
     rm -f /home/dungnt/mount_ok.txt  
   fi

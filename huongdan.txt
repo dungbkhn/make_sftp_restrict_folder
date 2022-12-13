@@ -67,6 +67,7 @@ do
   COUNTER=$(( COUNTER + 1 ))
   
   if [ $COUNTER -eq 20 ] ; then
+    echo 'mount first time not ok'
     touch /home/dungnt/mount_not_ok.txt
     break
   fi

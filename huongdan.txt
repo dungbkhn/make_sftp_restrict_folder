@@ -57,6 +57,7 @@ do
   rs=$(/sbin/fdisk -l | grep "/dev/sda")
   
   if [ "$rs" != "" ] ; then
+    echo 'mount first time'
     mount /dev/sda1 /var/res/backup  
     chmod 755 /var/res/backup
     touch /home/dungnt/mount_ok.txt    
@@ -81,18 +82,21 @@ do
   rs2=$(df | grep '/var/res/backup')
   
   if [ "$rs2" == "" ] ; then
+    echo 'rs2 null'
     rm /home/dungnt/mount_ok.txt
     #stop syncthing
     pkill syncthing
     #delete not-correct-backupfolder's content
     rs3=$(ls -A /var/res/backup)
     if [ "$rs3" != "" ] ; then
+      echo 'rs3 not null'
       rm -r -f /var/res/backup
       mkdir /var/res/backup
       chgrp -R dungnt /var/res/backup
       chown dungnt /var/res/backup
     fi
     if [ "$rs1" != "" ] ; then
+      echo 'rs1 not null'
       #trymount
       mount /dev/sda1 /var/res/backup  
       chmod 755 /var/res/backup

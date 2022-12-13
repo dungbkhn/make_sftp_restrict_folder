@@ -87,8 +87,8 @@ do
     #delete not-correct-backupfolder's content
     rm -r -f /var/res/backup
     mkdir /var/res/backup
-    sudo chgrp -R dungnt /var/res/backup
-    sudo chown -R dungnt /var/res/backup
+    chgrp -R dungnt /var/res/backup
+    chown dungnt /var/res/backup
     
     if [ "$rs1"!="" ] ; then
       #trymount

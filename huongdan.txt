@@ -82,7 +82,7 @@ do
   rs1=$(/sbin/fdisk -l | grep "/dev/sda")
   rs2=$(df | grep '/var/res/backup')
   
-  if [ "$rs1" == "" || "$rs2" == "" ] ; then
+  if [ "$rs1" == "" ] || [ "$rs2" == "" ] ; then
     echo 'n1'
     rm /home/dungnt/mount_ok.txt
     #stop syncthing
@@ -98,7 +98,7 @@ do
     fi
   fi
   
-  if [ "$rs1" != "" && "$rs2" == "" ] ; then
+  if [ "$rs1" != "" ] && [ "$rs2" == "" ] ; then
     echo 'n2'
     #trymount
     mount /dev/sda1 /var/res/backup  

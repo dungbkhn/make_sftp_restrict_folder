@@ -83,7 +83,13 @@ do
   if [ "$rs2"=="" ] ; then
     rm /home/dungnt/mount_ok.txt
     #stop syncthing
+    pkill syncthing
     #delete not-correct-backupfolder's content
+    rm -r -f /var/res/backup
+    mkdir /var/res/backup
+    sudo chgrp -R dungnt /var/res/backup
+    sudo chown -R dungnt /var/res/backup
+    
     if [ "$rs1"!="" ] ; then
       #trymount
       mount /dev/sda1 /var/res/backup  

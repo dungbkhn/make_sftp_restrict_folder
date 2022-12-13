@@ -98,9 +98,13 @@ do
     break
   fi
   
-  sleep 2
+  if [ -f /home/dungnt/mount_not_ok.txt ] ; then
+    rm /home/dungnt/mount_not_ok.txt
+    break
+  fi
+  
+  sleep 3
 done
-
 
 
 =====

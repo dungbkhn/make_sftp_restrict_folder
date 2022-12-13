@@ -109,12 +109,9 @@ done
 while true;
 do
   if [ -f /home/dungnt/mount_ok.txt ] ; then
-   
-    rm /home/dungnt/mount_ok.txt
-   
+    syncthing &
+    rm -f /home/dungnt/mount_ok.txt  
   fi
-  
-  
   
   sleep 15
 done

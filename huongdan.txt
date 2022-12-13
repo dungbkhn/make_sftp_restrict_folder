@@ -85,11 +85,13 @@ do
     #stop syncthing
     pkill syncthing
     #delete not-correct-backupfolder's content
-    rm -r -f /var/res/backup
-    mkdir /var/res/backup
-    chgrp -R dungnt /var/res/backup
-    chown dungnt /var/res/backup
-    
+    rs3=$(ls -A /var/res/backup)
+    if [ "$rs3"!="" ] ; then
+      rm -r -f /var/res/backup
+      mkdir /var/res/backup
+      chgrp -R dungnt /var/res/backup
+      chown dungnt /var/res/backup
+    fi
     if [ "$rs1"!="" ] ; then
       #trymount
       mount /dev/sda1 /var/res/backup  

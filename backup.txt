@@ -1,3 +1,4 @@
+sleep 3
 while true;
 do
   rs1=$(/sbin/fdisk -l | grep "/dev/sda")
@@ -32,4 +33,15 @@ do
 done
 
 ----
+sleep 3
 
+while true;
+do
+  if [ -f /home/dungnt/mount_ok.txt ] ; then
+    echo 'syncthing in loop ok'
+    syncthing &
+    rm -f /home/dungnt/mount_ok.txt  
+  fi
+  
+  sleep 15
+done

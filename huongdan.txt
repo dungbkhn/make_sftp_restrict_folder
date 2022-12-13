@@ -43,24 +43,34 @@ shopt -s dotglob
 shopt -s nullglob
 
 rm /home/dungnt/mount_ok.txt
+rm /home/dungnt/mount_not_ok.txt
 
 cd /home/dungnt/ChangeRemoteInfo
 node server.js &
 
 cd /home/dungnt
 
+COUNTER=0
+
 while true;
 do
   rs=$(/sbin/fdisk -l | grep "/dev/sda")
-
+  
   if [ "$rs"!="" ] ; then
     mount /dev/sda1 /var/res/backup  
     chmod 755 /var/res/backup
-    touch /home/dungnt/mount_ok.txt
+    touch /home/dungnt/mount_ok.txt    
     break
   fi
   
-  sleep 2
+  COUNTER=$(( COUNTER + 1 ))
+  
+  if [ $COUNTER -eq 20 ] ; then
+    touch /home/dungnt/mount_not_ok.txt
+    break
+  fi
+  
+  sleep 3
 done
 
 

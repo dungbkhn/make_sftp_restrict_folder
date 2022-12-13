@@ -94,12 +94,12 @@ while true;
 do
   if [ -f /home/dungnt/mount_ok.txt ] ; then
     syncthing &
-    rm /home/dungnt/mount_ok.txt
+    rm -f /home/dungnt/mount_ok.txt
     break
   fi
   
   if [ -f /home/dungnt/mount_not_ok.txt ] ; then
-    rm /home/dungnt/mount_not_ok.txt
+    rm -f /home/dungnt/mount_not_ok.txt
     break
   fi
   
@@ -109,15 +109,12 @@ done
 while true;
 do
   if [ -f /home/dungnt/mount_ok.txt ] ; then
-    syncthing &
+   
     rm /home/dungnt/mount_ok.txt
-    break
+   
   fi
   
-  if [ -f /home/dungnt/mount_not_ok.txt ] ; then
-    rm /home/dungnt/mount_not_ok.txt
-    break
-  fi
+  
   
   sleep 15
 done

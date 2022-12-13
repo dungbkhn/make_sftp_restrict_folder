@@ -75,8 +75,6 @@ do
   sleep 3
 done
 
-sleep 3
-
 =====
 tao file setup_for_crontab.sh, thiet lap chmod 755 cho no
 =====
@@ -111,18 +109,6 @@ do
   sleep 3
 done
 
-sleep 3
-
-while true;
-do
-  if [ -f /home/dungnt/mount_ok.txt ] ; then
-    echo 'syncthing in loop ok'
-    syncthing &
-    rm -f /home/dungnt/mount_ok.txt  
-  fi
-  
-  sleep 15
-done
 
 =====
 

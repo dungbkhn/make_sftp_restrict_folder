@@ -84,11 +84,13 @@ while true;
 do
   if [ -f /home/dungnt/mount_ok.txt ] ; then
     syncthing &
+    rm /home/dungnt/mount_ok.txt
     break
   fi
   
   sleep 2
 done
+
 
 
 =====

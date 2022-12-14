@@ -58,7 +58,9 @@ do
   
   if [ "$rs" != "" ] ; then
     echo 'mount first time'
-    mount /dev/sda1 /var/res/backup  
+    mount /dev/sda1 /var/res/backup     
+    chgrp -R dungnt /var/res/backup
+    chown dungnt /var/res/backup
     chmod 755 /var/res/backup
     touch /home/dungnt/mount_ok.txt    
     break

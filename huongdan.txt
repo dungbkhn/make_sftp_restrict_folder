@@ -126,6 +126,8 @@ roi them dong sau
 @reboot /home/dungnt/setup_for_crontab.sh
 
 ---
++neu usb chua chua du lieu sync:
 cam usb vao, format bang mkfs.ext4 /dev/sda1
 xoa thu muc lost+found trong usb vua format
 khoi dong lai orange pi pc
++neu usb dang chua du lieu sync: cam usb vao roi khoi dong lai orange pi pc

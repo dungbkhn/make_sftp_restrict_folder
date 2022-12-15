@@ -127,5 +127,5 @@ roi them dong sau
 
 ---
 cam usb vao, format bang mkfs.ext4 /dev/sda1
-xoa thu mua lost+found trong usb vua format
+xoa thu muc lost+found trong usb vua format
 khoi dong lai orange pi pc

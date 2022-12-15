@@ -74,6 +74,7 @@ do
     break
   fi
   
+  sleep 3
 done
 
 =====
@@ -107,6 +108,7 @@ do
     break
   fi
   
+  sleep 3
 done
 
 

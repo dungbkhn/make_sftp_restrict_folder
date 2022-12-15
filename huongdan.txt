@@ -124,3 +124,8 @@ roi them dong sau
 crontab -e
 roi them dong sau
 @reboot /home/dungnt/setup_for_crontab.sh
+
+---
+cam usb vao, format bang mkfs.ext4 /dev/sda1
+xoa thu mua lost+found trong usb vua format
+khoi dong lai orange pi pc

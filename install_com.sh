@@ -76,6 +76,8 @@ npm install multer express find
 
 chmod 755 ./changepw.sh
 
+chmod 755 ./getipv6addr.sh
+
 cd /home/dungnt
 
 rm -r -f /home/dungnt/CreateRemoteLink

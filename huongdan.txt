@@ -89,7 +89,10 @@ sleep 2
 cd /home/dungnt/CreateRemoteLink
 node server.js &
 cd /home/dungnt/autotox
-./autotox &
+#./autotox &
+chmod 777 reset_att.sh
+
+./reset_att.sh &
 
 cd /home/dungnt
 

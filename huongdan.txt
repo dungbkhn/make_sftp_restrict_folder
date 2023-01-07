@@ -133,3 +133,5 @@ cam usb vao, format bang mkfs.ext4 /dev/sda1
 xoa thu muc lost+found trong usb vua format
 khoi dong lai orange pi pc
 +neu usb dang chua du lieu sync: cam usb vao roi khoi dong lai orange pi pc
+---
+tu add crontab bang: /var/spool/cron/crontabs

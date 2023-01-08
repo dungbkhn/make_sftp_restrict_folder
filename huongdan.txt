@@ -14,7 +14,8 @@ tiep tuc chon 153 roi an enter
 thoat exit
 ---
 dang nhap bang ssh dungnt@<ipv4>
-lay file start.sh, gan chmod 755 cho file va chay file voi sudo voi 1 argument la dungnt
+chay git clone https://github.com/dungbkhn/ssf.git
+cd ssf, gan chmod 755 cho file start.sh va chay file nay voi sudo voi 1 argument la dungnt
 
 =============================================================================
 

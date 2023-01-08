@@ -45,4 +45,3 @@ apt install libtoxcore-dev -y
 
 apt install syncthing -y
 
-reboot

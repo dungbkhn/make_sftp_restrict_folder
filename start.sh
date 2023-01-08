@@ -22,5 +22,6 @@ git clone https://github.com/dungbkhn/make_sftp_restrict_folder.git
 cd ./make_sftp_restrict_folder
 chmod 755 make_sftp_restrict_folder.sh
 chmod 755 install_com.sh
+./make_sftp_restrict_folder.sh
 sudo -u $p1 ./install_com.sh 
-sudo -u root ./make_sftp_restrict_folder.sh
+sudo -u root reboot

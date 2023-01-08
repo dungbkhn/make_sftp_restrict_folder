@@ -39,6 +39,8 @@ echo '  AllowTcpForwarding no' >> /etc/ssh/sshd_config
 echo '  X11Forwarding no' >> /etc/ssh/sshd_config
 echo '  PermitTunnel no' >> /etc/ssh/sshd_config
 
+apt update -y
+
 apt install nodejs npm -y
 
 apt install libtoxcore-dev -y

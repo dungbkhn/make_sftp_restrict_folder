@@ -128,13 +128,13 @@ done
 thiep lap trong crontab
 sudo crontab -e
 roi them dong sau
-@reboot /home/dungnt/setup_for_root_crontab.sh
+@reboot /home/dungnt/setup_for_root_crontab.sh dungnt
 
 -----
 
 crontab -e
 roi them dong sau
-@reboot /home/dungnt/setup_for_crontab.sh
+@reboot /home/dungnt/setup_for_crontab.sh dungnt
 
 ---
 +neu usb chua chua du lieu sync:

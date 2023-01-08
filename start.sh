@@ -2,6 +2,13 @@
 shopt -s dotglob
 shopt -s nullglob
 
+isroot=$(id -u)
+
+if [ $isroot -ne 0 ] ; then
+        echo 'need root"s right'
+        exit 1
+fi
+ 
 if [ $# -ne 1 ] ; then
         echo 'need 1 param'
         exit 1

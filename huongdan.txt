@@ -52,13 +52,26 @@ tao file setup_for_root_crontab.sh, thiet lap chmod 755 cho no
 shopt -s dotglob
 shopt -s nullglob
 
-rm /home/dungnt/mount_ok.txt
-rm /home/dungnt/mount_not_ok.txt
+if [ $# -ne 1 ] ; then
+        echo 'need 1 param'
+        exit 1
+fi
 
-cd /home/dungnt/ChangeRemoteInfo
+p1=$1
+echo $p1
+
+if [ ! -d /home/$p1 ] ; then
+        echo 'directory not exists'
+        exit 1
+fi
+
+rm /home/$p1/mount_ok.txt
+rm /home/$p1/mount_not_ok.txt
+
+cd /home/$p1/ChangeRemoteInfo
 node server.js &
 
-cd /home/dungnt
+cd /home/$p1
 
 COUNTER=0
 
@@ -69,10 +82,10 @@ do
   if [ "$rs" != "" ] ; then
     echo 'mount first time'
     mount /dev/sda1 /var/res/backup     
-    chgrp -R dungnt /var/res/backup
-    chown dungnt /var/res/backup
+    chgrp -R $p1 /var/res/backup
+    chown $p1 /var/res/backup
     chmod 755 /var/res/backup
-    touch /home/dungnt/mount_ok.txt    
+    touch /home/$p1/mount_ok.txt    
     break
   fi
   
@@ -80,7 +93,7 @@ do
   
   if [ $COUNTER -eq 3 ] ; then
     echo 'mount first time not ok'
-    touch /home/dungnt/mount_not_ok.txt
+    touch /home/$p1/mount_not_ok.txt
     break
   fi
   

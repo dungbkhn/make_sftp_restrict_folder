@@ -18,23 +18,12 @@ chay git clone https://github.com/dungbkhn/ssf.git
 cd ssf, gan chmod 755 cho file start.sh va chay file nay voi sudo voi 1 argument la dungnt
 
 =============================================================================
-gan chmod 755 cho file setup_for_root_crontab.sh
-thiep lap trong crontab
-sudo crontab -e
-roi them dong sau
-@reboot /home/dungnt/setup_for_root_crontab.sh dungnt
-
------
-gan chmod 755 cho file setup_for_crontab.sh
-crontab -e
-roi them dong sau
-@reboot /home/dungnt/setup_for_crontab.sh dungnt
-
+neu loi thi 
+sudo rm -rf /home/dungnt/*
 ---
 +neu usb chua chua du lieu sync:
 cam usb vao, format bang mkfs.ext4 /dev/sda1
 xoa thu muc lost+found trong usb vua format
 khoi dong lai orange pi pc
 +neu usb dang chua du lieu sync: cam usb vao roi khoi dong lai orange pi pc
----
-tu add crontab bang: /var/spool/cron/crontabs
+

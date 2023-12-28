@@ -7,7 +7,7 @@ addgroup restriction
 
 useradd -M store
 
-echo -e "td123456789\ntd123456789" | passwd store
+echo -e "123456789\n123456789" | passwd store
 
 usermod -a -G  restriction store
 

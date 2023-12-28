@@ -2,7 +2,7 @@
 cai dat armbian orange pi pc
 dung nmap -sP 192.168.1.1/24 de do tim orange pi pc tren LAN
 ssh dungnt@<ipv4>
-pass:td123456
+pass:123456
 
 ---
 sau do

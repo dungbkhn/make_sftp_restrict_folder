@@ -1,8 +1,8 @@
 ---
 cai dat armbian orange pi pc
 dung nmap -sP 192.168.1.1/24 de do tim orange pi pc tren LAN
-ssh root@<ipv4>
-pass:1234
+ssh dungnt@<ipv4>
+pass:td123456
 
 ---
 sau do
@@ -27,3 +27,6 @@ xoa thu muc lost+found trong usb vua format
 khoi dong lai orange pi pc
 +neu usb dang chua du lieu sync: cam usb vao roi khoi dong lai orange pi pc
 
+---
+truy nhap bang fpts
+Host: sftp://store@<ip_adr>

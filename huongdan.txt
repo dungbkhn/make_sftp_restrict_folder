@@ -28,5 +28,8 @@ khoi dong lai orange pi pc
 +neu usb dang chua du lieu sync: cam usb vao roi khoi dong lai orange pi pc
 
 ---
+thay doi password cua store trong web
+https://<ip_adr>:19999
+user va pass xem tren file webinfo.txt khi ssh vao pi 
 truy nhap bang fpts
 Host: sftp://store@<ip_adr>
